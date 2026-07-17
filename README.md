@@ -78,14 +78,3 @@ Every question, whether typed into `scripts/ask_sql.py` or submitted through the
 | Bare foreign key ids are avoided in results | prompt_builder.py | The person asking rarely knows the schema well enough to request a join explicitly, so ids are resolved to a readable name column |
 | The production version must run entirely on local infrastructure | sql_generator.py (Ollama path) | Groq is present only for faster development iteration and is expected to be removed or made optional before the client facing release |
 
-## Example Questions
-
-These are the kind of questions the pipeline is meant to answer end to end, taken from the architecture reference.
-
-* Which products have a higher list price than their standard cost by more than 50 percent
-* What is the busiest month of the year for order volume, across all years combined
-* Which sales territory had the lowest average order value in 2013
-* Show all products whose inventory quantity is below their safety stock level
-* For each vendor, show their most expensive product supplied
-* List the five most recently hired employees along with their department
-* Show the total quantity sold for each product, only including products sold in more than 10 distinct orders
