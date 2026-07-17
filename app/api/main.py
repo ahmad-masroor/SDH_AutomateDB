@@ -128,7 +128,6 @@ def ask(request: AskRequest) -> AskResponse:
         message=result.get("message"),
     )
 
-
 @app.get("/api/health")
 def health() -> dict:
     return {"status": "ready" if pipeline is not None else "not_ready"}
