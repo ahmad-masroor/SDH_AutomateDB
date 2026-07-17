@@ -1,0 +1,209 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+  background: #747a58;
+  color: #c5abab;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  color: #a0a0a0;
+  font-size: 15px;
+}
+
+/* --- Input row --- */
+
+.ask-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.ask-form input[type="text"] {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  background: #f5f5f5;
+  color: #111111;
+  outline: none;
+}
+
+.ask-form input[type="text"]::placeholder {
+  color: #8a8a8a;
+}
+
+.ask-form input[type="text"]:focus {
+  border-color: #ffffff;
+}
+
+.ask-form input[type="text"]:disabled {
+  background: #e0e0e0;
+  color: #777777;
+}
+
+.ask-form button {
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+.ask-form button:hover:not(:disabled) {
+  background: #d8d8d8;
+}
+
+.ask-form button:disabled {
+  background: #4a4a4a;
+  color: #9a9a9a;
+  cursor: default;
+}
+
+/* --- Status badge --- */
+
+.results-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #e5e5e5;
+  color: #111111;
+}
+
+.badge-success {
+  background: #d7f5df;
+  color: #0f5d2c;
+}
+
+.badge-blocked,
+.badge-failed {
+  background: #f8d7d7;
+  color: #7a1414;
+}
+
+.badge-needs_clarification {
+  background: #fdeecb;
+  color: #7a4e05;
+}
+
+.muted {
+  color: #909090;
+  font-size: 14px;
+}
+
+/* --- Output panels: white/grey boxes on the black page --- */
+
+.panel {
+  background: #ececec;
+  color: #111111;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.panel-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6a6a6a;
+  margin-bottom: 8px;
+}
+
+.panel-error {
+  background: #f8d7d7;
+  color: #5a0f0f;
+}
+
+.panel-muted {
+  background: #dedede;
+}
+
+.sql-block {
+  margin: 0;
+  padding: 14px;
+  background: #1c1c1c;
+  color: #e8e8e8;
+  border-radius: 8px;
+  font-family: "SF Mono", Consolas, "Courier New", monospace;
+  font-size: 13.5px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+/* --- Results table --- */
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #ffffff;
+  font-size: 13.5px;
+}
+
+th,
+td {
+  padding: 9px 14px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+th {
+  background: #f0f0f0;
+  color: #444444;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background: #f7f7f7;
+}

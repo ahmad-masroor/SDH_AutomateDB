@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+metadata_cache/*.sqlite3
+faiss_index/*.index
+local_models/*.gguf
+logs/*.log
